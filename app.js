@@ -272,7 +272,7 @@ const RecipeApp = (() => {
             
             // If step is an object with substeps (recursion!)
             if (step.substeps) {
-                const subStepsHTML = renderSteps(step.substeps, level + 1).join('');
+                const subStepsHTML = renderSteps(step.substeps, level + 1);
                 return `
                     <li style="margin-left: ${level * 20}px"><strong>${stepNumber}.</strong> ${step.text}</li>
                     <ul style="list-style: none; padding: 0;">

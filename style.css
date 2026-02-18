@@ -29,6 +29,47 @@ header p {
     opacity: 0.9;
 }
 
+/* Search Bar (Part 4) */
+.search-container {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+.clear-search-btn {
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.clear-search-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -154,6 +195,18 @@ main {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
+/* Recipe Counter (Part 4) */
+#recipe-counter {
+    text-align: center;
+    font-size: 1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+}
+
 /* Recipe Controls - Toggle Buttons (Part 3) */
 .recipe-controls {
     display: flex;
@@ -182,6 +235,25 @@ main {
 
 .toggle-btn:active {
     transform: translateY(0);
+}
+
+/* Favorite Heart Button (Part 4) */
+.favorite-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.25rem;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.favorite-btn.favorited {
+    color: #e74c3c;
+    text-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
 }
 
 /* Expandable Sections */

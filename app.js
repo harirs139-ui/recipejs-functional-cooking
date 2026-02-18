@@ -5,7 +5,7 @@ const recipes = [
     title: "Classic Spaghetti Carbonara",
     time: 25,
     difficulty: "easy",
-    description: "A creamy Italian pasta dish made with eggs, cheese,pancetta, and black pepper.",
+    description: "A creamy Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
     category: "pasta"
 },
 
@@ -15,15 +15,15 @@ const recipes = [
     title: "Chicken Tikka Masala",
     time: 45,
     difficulty: "medium",
-    description: "Tender chicken pieces in a creamy, spiced tomato",
+    description: "Tender chicken pieces in a creamy, spiced tomato sauce.",
     category: "curry"
 },
-{   
+{
     id: 3,
     title: "Homemade Croissants",
     time: 180,
     difficulty: "hard",
-    description: "Buttery, flaky French pastries that require patiencebut deliver amazing results.",
+    description: "Buttery, flaky French pastries that require patience but deliver amazing results.",
     category: "baking"
 },
 {
@@ -31,7 +31,7 @@ const recipes = [
     title: "Greek Salad",
     time: 15,
     difficulty: "easy",
-    description: "Fresh vegetables, feta cheese, and olives tossed inolive oil and herbs.",
+    description: "Fresh vegetables, feta cheese, and olives tossed in olive oil and herbs.",
     category: "salad"
 },
 {
@@ -39,7 +39,7 @@ const recipes = [
     title: "Beef Wellington",
     time: 120,
     difficulty: "hard",
-    description: "Tender beef fillet coated with mushroom duxelles andwrapped in puff pastry.",
+    description: "Tender beef fillet coated with mushroom duxelles and wrapped in puff pastry.",
     category: "meat"
 },
 {
@@ -47,7 +47,7 @@ const recipes = [
     title: "Vegetable Stir Fry",
     time: 20,
     difficulty: "easy",
-    description: "Colorful mixed vegetables cooked quickly in a savory",
+    description: "Colorful mixed vegetables cooked quickly in a savory sauce.",
     category: "vegetarian"
 },
 {
@@ -55,7 +55,7 @@ const recipes = [
     title: "Pad Thai",
     time: 30,
     difficulty: "medium",
-    description: "Thai stir-fried rice noodles with shrimp, peanuts,and tangy tamarind sauce.",
+    description: "Thai stir-fried rice noodles with shrimp, peanuts, and tangy tamarind sauce.",
     category: "noodles"
 },
 {
@@ -63,7 +63,7 @@ const recipes = [
     title: "Margherita Pizza",
     time: 60,
     difficulty: "medium",
-    description: "Classic Italian pizza with fresh mozzarella,tomatoes, and basil.",
+    description: "Classic Italian pizza with fresh mozzarella, tomatoes, and basil.",
     category: "pizza"
 }
 ];
@@ -71,18 +71,16 @@ const recipes = [
 const recipeContainer = document.querySelector('#recipe-container');
 // Function to create single recipe card
 const createRecipeCard = (recipe) => {
-return `
-<div class="recipe-card">
-<h3>${recipe.title}</h3>
-<div class="recipe-meta">
-<span> ${recipe.time} mins</span>
-<span class="difficulty ${recipe.difficulty}">
-${recipe.difficulty}
-</span>
-</div>
-<p>${recipe.description}</p>
-</div>
-`;
+    return `
+        <div class="recipe-card" data-id="${recipe.id}">
+            <h3>${recipe.title}</h3>
+            <div class="recipe-meta">
+                <span>⏱️ ${recipe.time} min</span>
+                <span class="difficulty ${recipe.difficulty}">${recipe.difficulty}</span>
+            </div>
+            <p>${recipe.description}</p>
+        </div>
+    `;
 };
 // Function to render recipes
 const renderRecipes = (recipesArray) => {
